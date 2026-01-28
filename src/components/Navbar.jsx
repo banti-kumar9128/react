@@ -157,7 +157,7 @@ const Navbar = () => {
         <button
           onClick={() => (open ? setOpen(false) : setOpen(true))}
           aria-label="Menu"
-          className="sm:hidden"
+          className="sm:hidden cursor-pointer"
         >
           {/* Menu Icon SVG */}
           <svg
@@ -183,9 +183,18 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`${
-          open ? "flex" : "hidden"
-        } absolute top-[60px] left-0 w-full bg-white shadow-md py-4 flex-col items-start gap-2 px-5 text-sm md:hidden`}
+        
+  className={`
+    ${open ? "flex" : "hidden"}
+    absolute top-full right-0 w-full
+    bg-gray-400 shadow-md
+    py-4 px-6
+    flex-col gap-4
+    text-sm
+    md:hidden
+    z-50
+    curosor-pointer
+  `}
       >
         <Link onClick={() => setOpen(false)} to={"/"}>
           Home

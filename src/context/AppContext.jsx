@@ -5,7 +5,7 @@ import toast from "react-hot-toast";
 import axios from "axios";
 axios.defaults.withCredentials = true;
 axios.defaults.baseURL = import.meta.env.VITE_BACKEND_URL;
-export const AppContext = createContext(null);
+import { useAppContext } from "../context/AppContext";
 
 export const AppContextProvider = ({ children }) => {
   const navigate = useNavigate();

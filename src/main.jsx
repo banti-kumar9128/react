@@ -11,7 +11,7 @@ if (window.location.pathname.startsWith("/?")) {
 }
 
 createRoot(document.getElementById("root")).render(
-  <BrowserRouter basename="/ham">
+  <BrowserRouter basename="/react">
     <AppContextProvider>
       <App />
     </AppContextProvider>
